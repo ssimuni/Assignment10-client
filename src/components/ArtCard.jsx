@@ -6,7 +6,6 @@ import {
     CardFooter,
     Typography,
     Button,
-    Tooltip,
     IconButton,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
@@ -44,10 +43,12 @@ const ArtCard = ({ painting }) => {
                                 />
                             </svg>
                             {rating}</span>
+
                         <img
                             src={imgurl} className='lg:w-96 md:w-full md:h-[500px] lg:h-[300px]'
                             alt="ui/ux review check"
                         />
+
                         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
 
                     </CardHeader>
@@ -98,11 +99,13 @@ const ArtCard = ({ painting }) => {
                         </div>
 
                     </CardBody>
+
                     <CardFooter className="pt-3">
                         <Link className='btn bg-gradient-to-r from-blue-400 to-blue-900 text-white w-full' >
                             View Details
                         </Link>
                     </CardFooter>
+
                 </div>
 
             </Card>
