@@ -1,10 +1,13 @@
 import React from 'react'
+import { useContext } from 'react';
 import Swal from 'sweetalert2';
-const AddArt = () => {
+import { AuthContext } from '../providers/AuthProvider'
+import { Navigate } from 'react-router-dom';
 
+const AddArt = () => {
+    const { user } = useContext(AuthContext);
     const handleAddArt = event => {
         event.preventDefault();
-
         const form = event.target;
 
         const name = form.name.value;
@@ -57,11 +60,13 @@ const AddArt = () => {
                                 </div>
                                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
                                     <div className="relative mt-5">
-                                        <input id="name" name="name" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Name" />
+                                        <input id="name" name="name" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Name" value={user.displayName} />
+
                                         <label for="name" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Name</label>
                                     </div>
                                     <div className="relative mt-5">
-                                        <input id="email" name="email" type="email" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email" />
+                                        <input id="email" name="email" type="email" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email" value={user.email} />
+
                                         <label for="password" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email</label>
                                     </div>
                                     <div className="relative mt-5">

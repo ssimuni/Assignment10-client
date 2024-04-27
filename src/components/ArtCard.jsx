@@ -100,7 +100,7 @@ const ArtCard = ({ painting }) => {
                     </CardBody>
                     <CardFooter className="pt-3">
                         <Link className='btn bg-gradient-to-r from-blue-400 to-blue-900 text-white w-full' >
-                            View Property
+                            View Details
                         </Link>
                     </CardFooter>
                 </div>
