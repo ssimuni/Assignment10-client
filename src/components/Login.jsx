@@ -93,11 +93,28 @@ const Login = () => {
             </div>
             <div className=" mt-5">
               <div className="relative mt-5">
-                <input onChange={(e) => setEmail(e.target.value)} id="email" name="email" type="email" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email" />
+                <input
+                  onChange={(e) => setEmail(e.target.value)}
+                  id="email"
+                  name="email"
+                  value={email}
+                  type="email"
+                  className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                  placeholder="Email"
+                  required />
                 <label for="password" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email</label>
               </div>
+
+
               <div className="relative mt-5">
-                <input onChange={(e) => setPassword(e.target.value)} id="pass" name="pass" type="password" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
+                <input
+                  onChange={(e) => setPassword(e.target.value)} id="pass"
+                  name="password"
+                  value={password}
+                  type="password"
+                  className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                  placeholder="Password"
+                  required />
                 <label for="password" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
               </div>
             </div>

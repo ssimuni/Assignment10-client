@@ -13,6 +13,8 @@ import AddArt from './components/AddArt.jsx';
 import Home from './components/Home.jsx';
 import AuthProvider from './providers/AuthProvider.jsx'
 import Root from './layouts/Root.jsx'
+import PrivateRoute from "./routes/PrivateRoute";
+import ArtList from './components/ArtList.jsx';
 
 
 
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/addArt",
-      element: <AddArt></AddArt>
+      element: <PrivateRoute><AddArt></AddArt></PrivateRoute>
     },
     {
       path: '/login',
@@ -37,6 +39,10 @@ const router = createBrowserRouter([
     {
       path: '/register',
       element: <Register></Register>
+    },
+    {
+      path: '/artlist',
+      element: <PrivateRoute><ArtList></ArtList></PrivateRoute>
     }
     ]
   }
