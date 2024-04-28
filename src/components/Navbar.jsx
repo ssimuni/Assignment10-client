@@ -95,6 +95,8 @@ const Navbar = () => {
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/artlist">My Paintings and Drawings</NavLink></li>
     <li><NavLink to="/addArt">Add New Paintings or drawings</NavLink></li>
+    <li><NavLink to="/about">About Us</NavLink></li>
+    <li><NavLink to="/feedback">Give Us Feedback</NavLink></li>
   </>
   return (
     <div className="navbar bg-base-100 ">

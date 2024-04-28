@@ -74,6 +74,7 @@ const Home = () => {
 
             <h1 className='font-bold uppercase text-5xl bg-gradient-to-r from-blue-400 to-blue-900 
             text-center my-10 text-transparent bg-clip-text'>Art Gallery: <br /> Paintings and Drawings for Purchase</h1>
+            
             <div className='flex justify-around'>
                 <div className='lg:grid lg:grid-cols-2 gap-20'>
                     {

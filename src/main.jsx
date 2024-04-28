@@ -15,6 +15,8 @@ import AuthProvider from './providers/AuthProvider.jsx'
 import Root from './layouts/Root.jsx'
 import PrivateRoute from "./routes/PrivateRoute";
 import ArtList from './components/ArtList.jsx';
+import AboutUs from './components/AboutUs.jsx';
+import Feedback from './components/Feedback.jsx';
 
 
 
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
     {
       path: '/artlist',
       element: <PrivateRoute><ArtList></ArtList></PrivateRoute>
+    },
+    {
+      path: '/about',
+      element: <AboutUs></AboutUs>
+    },
+    {
+      path: '/feedback',
+      element: <Feedback></Feedback>
     }
     ]
   }
