@@ -17,6 +17,7 @@ import PrivateRoute from "./routes/PrivateRoute";
 import ArtList from './components/ArtList.jsx';
 import AboutUs from './components/AboutUs.jsx';
 import Feedback from './components/Feedback.jsx';
+import Details from './components/Details.jsx';
 
 
 
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/addArt",
-      element: <PrivateRoute><AddArt></AddArt></PrivateRoute>
+      element: <PrivateRoute><AddArt></AddArt></PrivateRoute>,
     },
     {
       path: '/login',
@@ -44,7 +45,8 @@ const router = createBrowserRouter([
     },
     {
       path: '/artlist',
-      element: <PrivateRoute><ArtList></ArtList></PrivateRoute>
+      element: <PrivateRoute><ArtList></ArtList></PrivateRoute>,
+      loader: () => fetch('http://localhost:5000/newart')
     },
     {
       path: '/about',
@@ -53,6 +55,11 @@ const router = createBrowserRouter([
     {
       path: '/feedback',
       element: <Feedback></Feedback>
+    },
+    {
+      path: '/details/:_id',
+      element: <PrivateRoute><Details></Details></PrivateRoute>,
+      loader: () => fetch('http://localhost:5000/newart')
     }
     ]
   }

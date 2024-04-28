@@ -76,7 +76,7 @@ const Home = () => {
             text-center my-10 text-transparent bg-clip-text'>Art Gallery: <br /> Paintings and Drawings for Purchase</h1>
             
             <div className='flex justify-around'>
-                <div className='lg:grid lg:grid-cols-2 gap-20'>
+                <div className='lg:grid lg:grid-cols-1 gap-20'>
                     {
                         paintings.map(painting => <ArtCard
                             key={painting._id}
