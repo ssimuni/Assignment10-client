@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../providers/AuthProvider'
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const AddArt = () => {
     const { user } = useContext(AuthContext);
@@ -43,6 +43,7 @@ const AddArt = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+
                 }
             })
     }

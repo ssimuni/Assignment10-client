@@ -123,11 +123,6 @@ const Details = () => {
 
                     </div>
 
-
-
-
-
-
                 </div>
 
             </Card >

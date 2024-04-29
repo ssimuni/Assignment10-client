@@ -15,12 +15,45 @@ import { IoColorPalette } from "react-icons/io5";
 import { BiCustomize } from "react-icons/bi";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
 import { HiMiniCurrencyDollar } from "react-icons/hi2";
+import Swal from 'sweetalert2';
 
 
 
 const MyArtCard = ({ painting }) => {
 
-    const { name, email, imgurl, itemname, subcat, price, rating, customization, processingtime, stock, description } = painting;
+    const handleDelete = _id => {
+        console.log(_id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+
+                fetch(`http://localhost:5000/newart/${_id}`, {
+                    method: 'Delete'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your Item has been deleted. Reload This page.",
+                                icon: "success"
+                            });
+                        }
+                    })
+            }
+        });
+    }
+
+    const { _id, name, email, imgurl, itemname, subcat, price, rating, customization, processingtime, stock, description } = painting;
 
     return (
         <div>
@@ -93,12 +126,12 @@ const MyArtCard = ({ painting }) => {
                     </CardBody>
 
                     <CardFooter className="pt-3 flex">
-                        <Link className='btn bg-gradient-to-r from-blue-400 to-blue-900 text-white ml-auto flex' >
+                        <Link className='btn bg-gradient-to-r from-blue-400 to-blue-900 text-white ml-auto flex' to={`update/${_id}`}>
                             Update
                         </Link>
-                        <Link className='btn bg-gradient-to-r from-blue-400 to-blue-900 text-white mr-auto ml-5 flex' >
+                        <button className='btn bg-gradient-to-r from-blue-400 to-blue-900 text-white mr-auto ml-5 flex' onClick={() => handleDelete(_id)} >
                             Delete
-                        </Link>
+                        </button>
                     </CardFooter>
 
                 </div>

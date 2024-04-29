@@ -74,17 +74,18 @@ const Home = () => {
 
             <h1 className='font-bold uppercase text-5xl bg-gradient-to-r from-blue-400 to-blue-900 
             text-center my-10 text-transparent bg-clip-text'>Art Gallery: <br /> Paintings and Drawings for Purchase</h1>
-            
-            <div className='flex justify-around'>
-                <div className='lg:grid lg:grid-cols-1 gap-20'>
-                    {
-                        paintings.map(painting => <ArtCard
-                            key={painting._id}
-                            painting={painting}
-                        ></ArtCard>)
-                    }
-                </div>
-            </div>
+
+            <table className='art-card-table'>
+                <tbody>
+                    {paintings.map((painting, index) => (
+                        <tr key={painting._id} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
+                            <td>
+                                <ArtCard painting={painting} />
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     )
 }

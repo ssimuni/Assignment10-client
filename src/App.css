@@ -72,3 +72,46 @@
 .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--primary);
 }
+
+/* Home.css */
+
+.art-card-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.art-card-table td {
+    padding: 10px;
+}
+
+.even-row {
+    animation: slideInLeft 10.5s forwards;
+}
+
+.odd-row {
+    animation: slideInRight 10.5s forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

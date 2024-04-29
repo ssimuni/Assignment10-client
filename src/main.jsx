@@ -18,6 +18,7 @@ import ArtList from './components/ArtList.jsx';
 import AboutUs from './components/AboutUs.jsx';
 import Feedback from './components/Feedback.jsx';
 import Details from './components/Details.jsx';
+import Update from './components/Update.jsx';
 
 
 
@@ -60,6 +61,11 @@ const router = createBrowserRouter([
       path: '/details/:_id',
       element: <PrivateRoute><Details></Details></PrivateRoute>,
       loader: () => fetch('http://localhost:5000/newart')
+    },
+    {
+      path: '/update/:id',
+      element: <PrivateRoute><Update></Update></PrivateRoute>,
+      loader: ({ params }) => fetch(`http://localhost:5000/newart/${params.id}`)
     }
     ]
   }
