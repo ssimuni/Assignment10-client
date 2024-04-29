@@ -126,7 +126,7 @@ const MyArtCard = ({ painting }) => {
                     </CardBody>
 
                     <CardFooter className="pt-3 flex">
-                        <Link className='btn bg-gradient-to-r from-blue-400 to-blue-900 text-white ml-auto flex' to={`update/${_id}`}>
+                        <Link className='btn bg-gradient-to-r from-blue-400 to-blue-900 text-white ml-auto flex' to={`/update/${_id}`}>
                             Update
                         </Link>
                         <button className='btn bg-gradient-to-r from-blue-400 to-blue-900 text-white mr-auto ml-5 flex' onClick={() => handleDelete(_id)} >

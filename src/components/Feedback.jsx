@@ -15,7 +15,7 @@ const Feedback = () => {
     <div>
       <div className="flex justify-center items-center h-screen bg-white lg:mt-5 ">
         <div className="container mx-auto my-4 px-4 lg:px-40">
-          <div className="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
+          <div className="left w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
             <div className="flex">
               <h1 className="font-bold uppercase text-5xl bg-gradient-to-r from-blue-400 to-blue-900 inline-block text-transparent bg-clip-text">Give your feedback</h1>
             </div>
@@ -51,7 +51,7 @@ const Feedback = () => {
             </div>
           </div>
 
-          <div className="w-full mb-20 lg:mb-0 lg:-mt-64 lg:w-2/6 ml-auto rounded-2xl bg-[url('2.jpg')] bg-cover">
+          <div className="right w-full mb-20 lg:mb-0 lg:-mt-64 lg:w-2/6 ml-auto rounded-2xl bg-[url('/2.jpg')] bg-cover">
             <div className="p-6 sm:p-16 bg-opacity-50 rounded-2xl bg-black">
 
               <div class="text-white">

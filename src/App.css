@@ -17,8 +17,8 @@
 }
 
 .swiper-slide img {
-    width: 37rem;
-    height: 38rem;
+    width: 34rem;
+    height: 35rem;
     border-radius: 2rem;
     object-fit: cover;
 }
@@ -62,7 +62,7 @@
 
 .swiper-pagination {
     position: relative;
-    padding-bottom: 70px;
+    padding-bottom: 90px;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -88,9 +88,19 @@
     animation: slideInLeft 10.5s forwards;
 }
 
+.left {
+    animation: slideInLeft 2.5s forwards;
+}
+
+
 .odd-row {
     animation: slideInRight 10.5s forwards;
 }
+
+.right {
+    animation: slideInRight 2.5s forwards;
+}
+
 
 @keyframes slideInLeft {
     from {

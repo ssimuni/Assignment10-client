@@ -24,7 +24,7 @@ const ArtCard = ({ painting }) => {
 
     return (
         <div>
-            <Card className="rounded-3xl w-full lg:max-w-[40rem] my-10 mx-auto">
+            <Card className="rounded-3xl w-96 lg:w-[40rem] my-10 mx-auto">
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-900 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-3xl">
                 </div>
 
@@ -48,7 +48,7 @@ const ArtCard = ({ painting }) => {
                             </span>
 
                             <img
-                                src={imgurl} className='lg:w-96 h-full'
+                                src={imgurl} className='lg:w-96 w-full h-full'
                                 alt="ui/ux review check"
                             />
 

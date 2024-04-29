@@ -63,7 +63,7 @@ const Register = () => {
     <div>
       <div className="flex justify-center items-center h-screen bg-white lg:mt-5 mt-20">
         <div className="container mx-auto my-4 px-4 lg:px-40">
-          <form onSubmit={handleRegister} className="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
+          <form onSubmit={handleRegister} className="left w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
             <div className="flex">
               <h1 className="font-bold uppercase text-5xl bg-gradient-to-r from-blue-400 to-blue-900 inline-block text-transparent bg-clip-text">Register Here</h1>
             </div>
@@ -117,7 +117,7 @@ const Register = () => {
             </div>
           </form>
 
-          <div className="w-full mb-20 lg:mb-0 lg:-mt-64 lg:w-2/6 ml-auto rounded-2xl bg-[url('2.jpg')] bg-cover">
+          <div className="right w-full mb-20 lg:mb-0 lg:-mt-64 lg:w-2/6 ml-auto rounded-2xl bg-[url('2.jpg')] bg-cover">
             <div className="p-6 sm:p-16 bg-opacity-50 rounded-2xl bg-black">
               <div class=" text-white rounded shadow-lg">
                 <div class="">
@@ -131,12 +131,7 @@ const Register = () => {
                   </div>
                   <span class="text-xs  mt-2">Save 20% with annual billing</span>
                 </div>
-                <div class="px-8 mt-4">
-                  <div class="flex items-end justify-between">
-                    <span class="text-sm font-semibold">Tax</span>
-                    <span class="text-sm  mb-px">10%</span>
-                  </div>
-                </div>
+
                 <div class="px-8 mt-4 border-t pt-4">
                   <div class="flex items-end justify-between">
                     <span class="font-semibold">Today you pay (AUD)</span>
@@ -145,7 +140,7 @@ const Register = () => {
                   <span class="text-xs  mt-2">After 1 month free: $22/mo.</span>
                 </div>
                 <div class="flex items-center px-8 mt-8">
-                  <input id="termsConditions" type="checkbox" />
+                  <input id="termsConditions" type="checkbox" required />
                   <label class="text-xs  ml-2" for="termsConditions" />I agree to the terms and conditions.
                 </div>
 

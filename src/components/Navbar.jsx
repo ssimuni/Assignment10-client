@@ -93,10 +93,11 @@ const Navbar = () => {
 
   const navlinks = <>
     <li><NavLink to="/">Home</NavLink></li>
-    <li><NavLink to="/artlist">My Paintings and Drawings</NavLink></li>
-    <li><NavLink to="/addArt">Add New Paintings or drawings</NavLink></li>
+    <li><NavLink to="/artlist">My Items</NavLink></li>
+    <li><NavLink to="/addArt">Add New Item</NavLink></li>
     <li><NavLink to="/about">About Us</NavLink></li>
-    <li><NavLink to="/feedback">Give Us Feedback</NavLink></li>
+    <li><NavLink to="/feedback">Give Feedback</NavLink></li>
+    <li><NavLink to="/allartcraft">See All Items</NavLink></li>
   </>
   return (
     <div className="navbar bg-base-100 ">

@@ -19,6 +19,8 @@ import AboutUs from './components/AboutUs.jsx';
 import Feedback from './components/Feedback.jsx';
 import Details from './components/Details.jsx';
 import Update from './components/Update.jsx';
+import AllInfo from './components/AllInfo.jsx';
+import AllArtCraft from './components/AllArtCraft.jsx';
 
 
 
@@ -31,6 +33,11 @@ const router = createBrowserRouter([
       path: '/',
       element: <Home></Home>,
       loader: () => fetch('http://localhost:5000/newart')
+    },
+    {
+      path: '/allinfo',
+      element: <AllInfo></AllInfo>,
+      loader: () => fetch('http://localhost:5000/info')
     },
     {
       path: "/addArt",
@@ -66,6 +73,11 @@ const router = createBrowserRouter([
       path: '/update/:id',
       element: <PrivateRoute><Update></Update></PrivateRoute>,
       loader: ({ params }) => fetch(`http://localhost:5000/newart/${params.id}`)
+    },
+    {
+      path: '/allartcraft',
+      element: <AllArtCraft></AllArtCraft>,
+      loader: () => fetch('http://localhost:5000/newart')
     }
     ]
   }
