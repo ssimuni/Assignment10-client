@@ -43,7 +43,23 @@ const Home = () => {
                 centeredSlides={true}
                 slideToClickedSlide={true}
                 loop={true}
-                slidesPerView={'3'}
+
+                breakpoints={{
+                    // when window width is >= 640px
+                    640: {
+                        width: 640,
+                        slidesPerView: 1,
+                    },
+                    // when window width is >= 768px
+                    768: {
+                        width: 768,
+                        slidesPerView: 2,
+                    },
+                    1430: {
+                        width: 1430,
+                        slidesPerView: 3,
+                    },
+                }}
                 clickable={true}
                 coverflowEffect={{
                     rotate: 0,
@@ -60,26 +76,30 @@ const Home = () => {
                 modules={[EffectCoverflow, Pagination, Navigation]}
                 className="swiper_container"
             >
+
                 <SwiperSlide>
-                    <img src="1.jpg" alt="slide_image" />
+                    <img src="i2.jpg" className='border shadow-lg' alt="slide_image" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="2.jpg" alt="slide_image" />
+                    <img src="3.jpg" className='border shadow-lg' alt="slide_image" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="3.jpg" alt="slide_image" />
+                    <img src="i4.jpg" className='border shadow-lg' alt="slide_image" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="4.jpg" alt="slide_image" />
+                    <img src="i5.jpg" className='border shadow-lg' alt="slide_image" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="5.jpg" alt="slide_image" />
+                    <img src="4.jpg" className='border shadow-lg' alt="slide_image" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="6.jpg" alt="slide_image" />
+                    <img src="i3.jpg" className='border shadow-lg' alt="slide_image" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="7.jpg" alt="slide_image" />
+                    <img src="i7.jpg" className='border shadow-lg' alt="slide_image" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="i6.jpg" className='border-b border-black shadow-lg' alt="slide_image" />
                 </SwiperSlide>
 
                 <div className="slider-controler">
@@ -96,17 +116,15 @@ const Home = () => {
             <h1 className='font-bold uppercase text-5xl bg-gradient-to-r from-blue-300 to-blue-900 
             text-center mb-10 text-transparent bg-clip-text '>Art Gallery: <br /> Paintings and Drawings for Purchase</h1>
 
-            <table className='art-card-table bg-gray-100 '>
-                <tbody>
+            <div className='bg-gray-100 my-10 art-card-table'>
+                <div className='lg:grid lg:grid-cols-2 mx-auto '>
                     {paintings.map((painting, index) => (
-                        <tr key={painting._id} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
-                            <td>
-                                <ArtCard painting={painting} />
-                            </td>
-                        </tr>
+                        <div key={painting._id} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
+                            <ArtCard painting={painting} />
+                        </div>
                     ))}
-                </tbody>
-            </table>
+                </div>
+            </div>
 
 
             <h1 className='font-bold uppercase text-5xl bg-gradient-to-r from-blue-400 to-blue-900 

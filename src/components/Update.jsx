@@ -2,12 +2,12 @@ import React from 'react'
 import { useContext } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../providers/AuthProvider'
-import { Navigate, useLoaderData, useHistory } from 'react-router-dom';
+import { Navigate, useLoaderData } from 'react-router-dom';
 
 
 const Update = () => {
     const painting = useLoaderData();
-    const history = useHistory();
+
     const { user } = useContext(AuthContext);
     const { _id, name, email, imgurl, itemname, subcat, price, rating, customization, processingtime, stock, description } = painting;
 
@@ -49,7 +49,7 @@ const Update = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
-                    history.push('/artlist');;
+
                 }
             })
     }

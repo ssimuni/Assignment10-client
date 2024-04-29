@@ -21,6 +21,7 @@ import Details from './components/Details.jsx';
 import Update from './components/Update.jsx';
 import AllInfo from './components/AllInfo.jsx';
 import AllArtCraft from './components/AllArtCraft.jsx';
+import SubCat from './components/SubCat.jsx';
 
 
 
@@ -77,6 +78,11 @@ const router = createBrowserRouter([
     {
       path: '/allartcraft',
       element: <AllArtCraft></AllArtCraft>,
+      loader: () => fetch('http://localhost:5000/newart')
+    },
+    {
+      path: '/subcat/:sub_name',
+      element: <SubCat></SubCat>,
       loader: () => fetch('http://localhost:5000/newart')
     }
     ]

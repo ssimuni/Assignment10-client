@@ -6,9 +6,9 @@ const AllArtCraft = () => {
     return (
         <div>
             <div className='flex mx-auto justify-center '>
-                <table className='border border-gray-400'>
+                <table className='border border-gray-400 '>
 
-                    <tbody className='border border-gray-400'>
+                    <tbody className='border border-gray-400 w-96'>
                         {paintings.map((painting, index) => (
                             <tr key={painting._id} className={index % 2 === 0 ? 'left' : 'right'}>
                                 <td>
