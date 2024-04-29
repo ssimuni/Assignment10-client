@@ -8,7 +8,6 @@ const AllArtCraftTable = ({ painting }) => {
     return (
         <div>
             <tr className='border-none'>
-
                 <td class="p-4 border-b ">
                     <img src={imgurl} alt="Spotify" class="w-20 h-14" />
                 </td>
