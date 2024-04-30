@@ -35,7 +35,7 @@ const MyArtCard = ({ painting }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/newart/${_id}`, {
+                fetch(`https://assignment10-server-ssimunis-projects.vercel.app/newart/${_id}`, {
                     method: 'Delete'
                 })
                     .then(res => res.json())

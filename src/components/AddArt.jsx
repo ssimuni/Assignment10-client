@@ -26,7 +26,7 @@ const AddArt = () => {
 
         console.log(newArt);
 
-        fetch('http://localhost:5000/newart', {
+        fetch('https://assignment10-server-ssimunis-projects.vercel.app/newart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

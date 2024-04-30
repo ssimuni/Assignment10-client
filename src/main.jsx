@@ -33,12 +33,12 @@ const router = createBrowserRouter([
     children: [{
       path: '/',
       element: <Home></Home>,
-      loader: () => fetch('http://localhost:5000/newart')
+      loader: () => fetch('https://assignment10-server-ssimunis-projects.vercel.app/newart')
     },
     {
       path: '/allinfo',
       element: <AllInfo></AllInfo>,
-      loader: () => fetch('http://localhost:5000/info')
+      loader: () => fetch('https://assignment10-server-ssimunis-projects.vercel.app/info')
     },
     {
       path: "/addArt",
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
     {
       path: '/artlist',
       element: <PrivateRoute><ArtList></ArtList></PrivateRoute>,
-      loader: () => fetch('http://localhost:5000/newart')
+      loader: () => fetch('https://assignment10-server-ssimunis-projects.vercel.app/newart')
     },
     {
       path: '/about',
@@ -68,22 +68,22 @@ const router = createBrowserRouter([
     {
       path: '/details/:_id',
       element: <PrivateRoute><Details></Details></PrivateRoute>,
-      loader: () => fetch('http://localhost:5000/newart')
+      loader: () => fetch('https://assignment10-server-ssimunis-projects.vercel.app/newart')
     },
     {
       path: '/update/:id',
       element: <PrivateRoute><Update></Update></PrivateRoute>,
-      loader: ({ params }) => fetch(`http://localhost:5000/newart/${params.id}`)
+      loader: ({ params }) => fetch(`https://assignment10-server-ssimunis-projects.vercel.app/newart/${params.id}`)
     },
     {
       path: '/allartcraft',
       element: <AllArtCraft></AllArtCraft>,
-      loader: () => fetch('http://localhost:5000/newart')
+      loader: () => fetch('https://assignment10-server-ssimunis-projects.vercel.app/newart')
     },
     {
       path: '/subcat/:sub_name',
       element: <SubCat></SubCat>,
-      loader: () => fetch('http://localhost:5000/newart')
+      loader: () => fetch('https://assignment10-server-ssimunis-projects.vercel.app/newart')
     }
     ]
   }

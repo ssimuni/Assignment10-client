@@ -117,7 +117,7 @@ const Register = () => {
             </div>
           </form>
 
-          <div className="right w-full mb-20 lg:mb-0 lg:-mt-64 lg:w-2/6 ml-auto rounded-2xl bg-[url('2.jpg')] bg-cover">
+          <div className="right w-full mb-20 lg:mb-0 lg:-mt-64 lg:w-2/6 ml-auto rounded-2xl bg-[url('/2.jpg')] bg-cover">
             <div className="p-6 sm:p-16 bg-opacity-50 rounded-2xl bg-black">
               <div class=" text-white rounded shadow-lg">
                 <div class="">

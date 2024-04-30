@@ -126,7 +126,7 @@ const Login = () => {
             </div>
           </form>
 
-          <div className="right w-full mb-20 lg:mb-0 lg:-mt-64 lg:w-2/6 ml-auto rounded-2xl bg-[url('2.jpg')] bg-cover">
+          <div className="right w-full mb-20 lg:mb-0 lg:-mt-64 lg:w-2/6 ml-auto rounded-2xl bg-[url('/2.jpg')] bg-cover">
             <div className="p-6 sm:p-16 bg-opacity-50 rounded-2xl bg-black">
               <div className="space-y-4">
                 <h2 className="text-2xl text-white font-bold">Sign in to unlock the <br /> best of ArtFlicks.</h2>

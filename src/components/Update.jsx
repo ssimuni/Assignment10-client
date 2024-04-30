@@ -32,7 +32,7 @@ const Update = () => {
 
         console.log(updatedArt);
 
-        fetch(`http://localhost:5000/newart/${_id}`, {
+        fetch(`https://assignment10-server-ssimunis-projects.vercel.app/newart/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

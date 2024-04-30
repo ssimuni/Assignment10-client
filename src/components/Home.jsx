@@ -18,7 +18,7 @@ const Home = () => {
     useEffect(() => {
         const fetchInfo = async () => {
             try {
-                const response = await fetch('http://localhost:5000/info');
+                const response = await fetch('https://assignment10-server-ssimunis-projects.vercel.app/info');
                 if (response.ok) {
                     const data = await response.json();
                     setInfos(data); // Update state with fetched data

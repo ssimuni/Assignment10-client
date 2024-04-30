@@ -17,7 +17,7 @@ const InfoCard = ({ info }) => {
     return (
         <div>
             <Link to={`/subcat/${info.sub_name}`}>
-                <Card className="rounded-3xl w-96 lg:max-w-[23rem] my-10 mx-auto">
+                <Card className="rounded-3xl md:w-96 w-[350px] lg:max-w-[23rem] my-10 mx-auto">
                     <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-900 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-3xl">
                     </div>
 
@@ -28,7 +28,7 @@ const InfoCard = ({ info }) => {
 
 
                                 <img
-                                    src={image} className='lg:w-96 h-full'
+                                    src={image} className='lg:w-96 w-full h-full'
                                     alt="ui/ux review check"
                                 />
 

@@ -111,7 +111,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <a id="not-clickable"><img className="h-10" src="/logo.png" alt="" /></a>
+        <a id="not-clickable"><img className="h-10 hidden lg:block" src="/logo.png" alt="" /></a>
         <Tooltip anchorSelect="#not-clickable">
           <button>Welcome to ArtFlicks</button>
         </Tooltip>

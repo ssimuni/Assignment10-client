@@ -10,7 +10,7 @@ const Subcat = () => {
     useEffect(() => {
         const fetchArts = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/newart/subcategory/${sub_name}`);
+                const response = await fetch(`https://assignment10-server-ssimunis-projects.vercel.app/newart/subcategory/${sub_name}`);
                 if (response.ok) {
                     const data = await response.json();
                     setArts(data);
